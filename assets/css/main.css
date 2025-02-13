@@ -4687,3 +4687,28 @@ input, select, textarea {
 		}
 
 	}
+
+.skills {
+    margin-top: 15px;
+    font-size: 2em;  /* Makes the icons larger */
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.skills i {
+    color: #6c757d; /* Default icon color */
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.skills i:hover {
+    color: #007bff; /* Change color on hover */
+    transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+.skills img {
+    width: 40px; /* Adjust size for PyTorch, Hugging Face, Transformers icons */
+    height: 40px;
+    vertical-align: middle;
+}

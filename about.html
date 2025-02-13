@@ -10,14 +10,28 @@
 	</head>
 	<body class="is-preload">
 
-				<!-- Wrapper -->
+			<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
 
 				<!-- Intro -->
 					<div id="intro">
-						<h1>Rachneet<br />
-						Sachdeva</h1>
+						<h1 id="scrambled-name">Rchneeta<br />
+						Sdahcave</h1>
 						<p>Ph.D. Student @ <a href="https://www.informatik.tu-darmstadt.de/ukp/ukp_home/index.en.jsp">UKP Lab</a>, TU Darmstadt</p>
+
+						 <!-- Skills Section -->
+						<div class="skills">
+							<i class="icon brands fa-python" title="Python"></i>
+							<i class="icon solid fa-brain" title="Machine Learning"></i>
+							<i class="icon solid fa-robot" title="Artificial Intelligence"></i>
+							<i class="icon solid fa-language" title="Natural Language Processing"></i>
+							<i class="icon solid fa-database" title="Data Science"></i>
+							<i class="icon solid fa-code" title="Software Engineering"></i>
+							<i class="icon brands fa-docker" title="Docker"></i>
+<!--							<i class="icon"><img src="images/PyTorch.png" alt="PyTorch" title="PyTorch"></i>-->
+<!--							<i class="icon"><img src="images/hf-logo.png" alt="Hugging Face" title="Hugging Face"></i>-->
+						</div>
+
 						<ul class="actions">
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
@@ -127,6 +141,32 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+		<!-- JavaScript for Name Animation -->
+			<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const nameElement = document.getElementById("scrambled-name");
+				const originalName = "Rachneet Sachdeva";
+				const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+				let scrambledArray = originalName.split("").map((char) =>
+					char === " " ? " " : letters[Math.floor(Math.random() * letters.length)]
+				);
+
+				nameElement.innerText = scrambledArray.join("");
+
+				let index = 0;
+				const interval = setInterval(() => {
+					if (index < originalName.length) {
+						scrambledArray[index] = originalName[index];
+						nameElement.innerText = scrambledArray.join("");
+						index++;
+					} else {
+						clearInterval(interval);
+					}
+				}, 100); // Speed of letter change
+			});
+			</script>
 
 	</body>
 </html>
