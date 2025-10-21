@@ -1,1 +1,6 @@
+# ignore unnecessary files
 files/CV.pdf
+files/CV_Rachneet_AI_Engineer.pdf
+
+# compiler files
+.idea/
